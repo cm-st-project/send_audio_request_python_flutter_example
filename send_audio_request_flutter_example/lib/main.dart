@@ -49,8 +49,8 @@ class _HomePageState extends State<HomePage> {
   final FileType _pickingType = FileType.custom;
   bool _isLoading = false;
 
-  // String serverUrl = 'http://54.188.114.42:5000'; //AWS ip address
-  String serverUrl = 'http://10.0.2.2:5000'; // Locally
+  String serverUrl = 'http://52.53.254.134:5000'; //AWS ip address
+  // String serverUrl = 'http://10.0.2.2:5000'; // Locally
 
   bool _isUploading = false;
   String? _result;
@@ -111,6 +111,7 @@ class _HomePageState extends State<HomePage> {
         }
         setState(() {
           _isUploading = false;
+          _result = 'Failed to get the response correctly!';
         });
         // The next line disables the wakelock again.
 
